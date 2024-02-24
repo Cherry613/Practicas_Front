@@ -1,0 +1,324 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+
+/*---------------------------mis estilos--------------------------------*/
+
+.flex-indice {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-items: center;
+}
+
+.flex-indice2{
+  display: flex;
+  flex-flow: row;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-quote{
+  display: flex;
+  flex-flow: row;
+}
+
+.flex-disco{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+
+body{
+  background-image: url(https://i.pinimg.com/originals/ab/2e/85/ab2e855da799d8c2587fabc789f164fa.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body.quote{
+  background-image: url(https://i.gifer.com/2iiB.gif), url(https://ak.picdn.net/shutterstock/videos/1086828731/thumb/1.jpg);
+  background-position: top, cover;
+  background-repeat: repeat, no-repeat;
+}
+
+/*--------------------------------TEXTO-----------------------------*/
+
+h1{
+  text-align: center;
+  border-radius: 10px;
+}
+
+.morado{
+  background-image: linear-gradient(to bottom right, rgb(97, 234, 193), rgb(200, 82, 200));
+  color: white;
+  text-shadow: 2px 2px 4px #fabada;
+  font-size: 30px;
+  font-family: Courier;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.quote-random{
+  display: flex;
+  font-family: fantasy;
+  background-color: antiquewhite;
+  margin-top: 100px;
+  font-size: 26px;
+  scale: 110%;
+}
+
+/*animacion para que el texto salga girando a la pasarela*/
+@keyframes girarYCrece {
+  0% {
+      transform: scale(0) rotate(0deg);
+  }
+  100% {
+      transform: scale(1) rotate(360deg);
+  }
+}
+
+.centrado-quote {
+  display: bl;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  width: 50%;
+  animation: girarYCrece 5s linear 1;
+}
+
+.rotar-texto {
+  transition: transform 2s;
+}
+
+.rotar-texto:hover {
+  transform: rotateX(360deg);
+}
+
+.rotar-imagen {
+  transition: transform 0.5s;
+}
+
+.rotar-imagen:hover {
+  transform: rotateY(360deg);
+}
+
+/*--------------------------------IMAGENES-----------------------------*/
+
+/*animacion para q baje una imagen de arriba rotando*/
+@keyframes deslizar {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.centrado-imagen {
+  display: flex;
+  flex-shrink: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  animation: deslizar 5s ease-in-out 1;
+  transition: transform 2s;
+}
+
+.centrado-imagen:hover{
+  transform: rotateY(360deg);
+}
+
+image:hover { /* esta es la animacion q vi en la web q queria ponerle al gif de la disco pero creo q si gira sobre la y mejor porq es como si girara la bola pero a lo cutre*/
+  width: 500px;
+  height: 500px;
+  transform: rotate(180deg);
+}
+
+/*--------------------------------BOTONES-----------------------------*/
+@keyframes arcoiris{
+  0%{background-color: rgb(241, 88, 88);}
+  10%{background-color: rgb(245, 154, 51);}
+  20%{background-color: rgb(251, 225, 95);}
+  30%{background-color: rgb(148, 248, 71);}
+  40%{background-color: rgb(78, 247, 230);}
+  50%{background-color: rgb(94, 86, 250);}
+  60%{background-color: rgb(198, 86, 250);}
+  70%{background-color: rgb(250, 86, 214);}
+  80%{background-color: rgb(250, 86, 138);}
+  90%{background-color: rgb(250, 86, 86);}
+  100%{background-color:rgb(241, 88, 88);}
+}
+
+@keyframes moverse {
+  0%{transform: translate(-50px);}
+  10%{transform: translateY(50px);}
+  25%{transform: translateY(-50px);}
+  50%{transform: translateY(50px);}
+  65%{transform: translateY(0);}
+  70%{transform: translateY(50px);}
+  90%{transform: translateY(-50px);}
+  100%{transform: translate(-50px);}
+
+}
+
+button {
+  padding: 10px 20px;
+  border: 1px solid steelblue;
+  margin-top: 150px;
+  font-size: 20px;
+  scale: 200%;
+  transition: width 4s, height 4s;
+}
+
+.arcoiris{
+  animation: arcoiris 5s linear infinite;
+}
+
+.arcoiris:hover{
+  width: 100px;
+  height: 100px
+}
+
+.imagen{
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20201013/pngtree-purple-disco-background-image_403583.jpg );
+}
+
+button.imagen:active{
+  animation: moverse 10s ease-in-out infinite;
+}
+
+button:active {
+  border: 2px dotted black;
+  color: rgb(255, 0, 255);
+}
+
+
+
+
+
+
+button, [role="button"] {
+  cursor: pointer;
+}
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 1em;
+}
+img,
+svg {
+  display: block;
+}
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.my-6 {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.my-4 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.py-8 {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+.bg-\[\#86efac\] {
+  background-color: #86efbe;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.py-6 {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.py-1 {
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+}
+.border-gray-500 {
+  border-color: #6b7280;
+}
+.bg-white {
+  background-color: #fff;
+}
+.flex {
+  display: flex;
+}
+.gap-8 {
+  grid-gap: 2rem;
+  gap: 2rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.max-w-screen-md {
+  max-width: 768px;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.border-2 {
+  border-width: 2px;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.hover\:bg-gray-200:hover {
+  background-color: #e5e7eb;
+}
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
