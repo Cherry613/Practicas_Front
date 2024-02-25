@@ -44,7 +44,7 @@ body{
   background-repeat: no-repeat;
 }
 
-body.quote{
+.quote{
   background-image: url(https://i.gifer.com/2iiB.gif), url(https://ak.picdn.net/shutterstock/videos/1086828731/thumb/1.jpg);
   background-position: top, cover;
   background-repeat: repeat, no-repeat;
@@ -76,6 +76,21 @@ h1{
   scale: 110%;
 }
 
+@keyframes crecer {
+  0%{ font-size: 20px}
+  50%{ font-size: 30px}
+  100%{ font-size: 20px}
+}
+
+.anuncio{
+  text-align: center;
+  background-color: antiquewhite;
+  font-size: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px red;
+  animation: crecer 3s ease-in-out infinite;
+}
+
 /*animacion para que el texto salga girando a la pasarela*/
 @keyframes girarYCrece {
   0% {
@@ -91,6 +106,7 @@ h1{
   margin-left: auto;
   margin-right: auto;
   margin-top: 200px;
+  margin-bottom: 100px;
   width: 50%;
   animation: girarYCrece 5s linear 1;
 }

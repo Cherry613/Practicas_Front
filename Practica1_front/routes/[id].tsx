@@ -28,16 +28,26 @@ export const handler: Handlers = {
 
 const Page = (props: PageProps<Data>) => {
     return (
+        
         <body class="quote">
-            <div class= "flex-disco">
+            <div>
+                <div class= "flex-disco">
                 <image src= "https://i.gifer.com/XVny.gif" />
                 <image src= "https://img1.picmix.com/output/stamp/normal/5/9/1/9/2409195_bac5b.gif" class="centrado-imagen"></image>
                 <image src= "https://i.gifer.com/XVny.gif" />
+                </div>
+                
+                <div class = "centrado-quote rotar-texto">
+                    <p class="morado">{props.data}</p>
+                </div>   
+
+                <div>
+                    <p class ="anuncio">Wanna keep the party going? Contact us and we will offer U one of our locals so the party never dies<br></br>
+                    <a href="https://localparafiestasmadrid.es/celebra-fiestas-horteras-en-madrid/"> Celebra fiestas horteras en madrid </a>
+                    </p>
+                </div> 
             </div>
             
-            <div class = "centrado-quote rotar-texto">
-                <p class="morado">{props.data}</p>
-            </div>            
         </body>
     )
 }
